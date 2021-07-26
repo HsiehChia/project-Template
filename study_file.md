@@ -70,6 +70,7 @@ npm install mysql --save
 // 新建一个user基础表，包括id, username, password, email, address几个基础关键字
 
 // server中新建model/Model.js数据库连接模型配置本地数据库
+=======
 
 ```
 
