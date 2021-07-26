@@ -11,9 +11,10 @@ module.exports = class Model {
         // 创建连接
         Model.conn = mysql.createConnection({
             host: '127.0.0.1',
+            port: '3306',
             user: 'root',
             password: '123456',
-            database: 'myblog'
+            database: 'project_template'
         })
         // 连接数据库
         Model.conn.connect(err => {
