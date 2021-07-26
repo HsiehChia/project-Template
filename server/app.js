@@ -41,5 +41,5 @@ app.use(function(err, req, res, next) {
 });
 
 server.listen('3000', () => {
-  console.log('server start on port: http://localhost:3000');
+  console.log('server start on port: http://127.0.0.1:3000');
 })
