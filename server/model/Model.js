@@ -13,7 +13,7 @@ module.exports = class Model {
             host: '127.0.0.1',
             user: 'root',
             password: '123456',
-            database: 'myblog'
+            database: 'project_template'
         })
         // 连接数据库
         Model.conn.connect(err => {
