@@ -1,3 +1,3 @@
-import * as base from './base'
+import * as userRequest from './user'
 
-export default base
+export default userRequest
