@@ -11,6 +11,15 @@ var app = express();
 var http = require('http');
 var server = http.createServer(app)
 
+// 设置跨域
+app.all('/*', (req, res, next)=>{
+  // 允许跨域
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  // 允许自定义响应头请求
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  next();
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -40,6 +49,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-server.listen('3000', () => {
-  console.log('server start on port: http://127.0.0.1:3000');
+server.listen('8080', () => {
+  console.log('server start on port: http://127.0.0.1:8080');
 })

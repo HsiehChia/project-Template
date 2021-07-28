@@ -1,9 +1,9 @@
 import React from 'react'
-import base from '../../service'
+import userRequest from '../../service'
 
 export default function Login() {
-    const getUser = base.getUser
-    console.log(getUser())
+    const getUser = () => userRequest.getUser()
+    getUser()
     return (
         <div>
             Login
