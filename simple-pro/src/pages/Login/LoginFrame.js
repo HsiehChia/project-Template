@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Register() {
+export default function LoginFrame() {
     return (
         <div>
-            register
+            LoginFrame
         </div>
     )
 }
