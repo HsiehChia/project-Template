@@ -5,7 +5,7 @@ import {
 } from '@material-ui/core';
 
 const StyledDiv = styled ('div')({
-    backgroundColor: '#f9bb8b',
+    backgroundColor: '#f5cbab',
     height: 40,
     position: 'fixed',
     width: '100%',

@@ -6,7 +6,7 @@ import {
 
 const StyledDiv = styled ('div')({
     height: 50,
-    backgroundColor: '#ff9c2b',
+    backgroundColor: '#bebeff',
     position: 'fixed',
     width: '100%',
     top: 0,
@@ -19,7 +19,7 @@ const StyledContainer = styled (Container)({
 })
 
 const StyledH2 = styled ('h2')({
-    color: '#fff',
+    color: '#272727cf',
     textAlign: 'center',
     margin: 0,
 })
