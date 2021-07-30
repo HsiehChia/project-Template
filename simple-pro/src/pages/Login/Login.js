@@ -1,8 +1,8 @@
 import React from 'react'
-import {
-    Header,
-    Footer,
-} from '../../utils/Components'
+// import {
+//     Header,
+//     Footer,
+// } from '../../utils/Components'
 
 import {
     styled,
@@ -16,10 +16,11 @@ const StyledContainer = styled ('div')({
     backgroundColor: '#fff',
     position: 'fixed',
     width: '100%',
-    top: 50,
+    top: 0,
     left: 0,
-    bottom: 40,
+    bottom: 0,
     overflow: 'auto',
+    zIndex: -1,
 })
 
 export default function Login() {
@@ -29,13 +30,13 @@ export default function Login() {
     const loginStatusFields = [0, 1, 2]
     return (
         <>
-            <Header></Header>
+            {/* <Header></Header> */}
             <StyledContainer>
                 <LoginFrame
                     loginStatus={loginStatusFields}
                 />
             </StyledContainer>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </>
     )
 }
