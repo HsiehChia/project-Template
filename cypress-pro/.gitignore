@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# run project: npm run cypress
+
 # dependencies
 /node_modules
 /.pnp
