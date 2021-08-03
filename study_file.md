@@ -1,6 +1,4 @@
-## 前端学习
-
-### 2021/7/23
+### 前端学习
 
 #### 1. express 框架搭建使用
 
@@ -46,6 +44,84 @@ npm start / npm run start
 
 
 #### 2. simple-project搭建使用
+
+
+
+#### 3. cypress-project搭建使用
+
+##### 3.1 cypress环境
+
+1.安装node.js
+
+- https://nodejs.org/zh-cn/
+
+- 按步骤安装好node 和 npm
+
+2.安装cypress
+
+- 新建项目目录cypress-pro
+
+- 项目包初始化：`npm init `，一直回车生成package.json文件
+
+- 安装cypress：`npm install cypress --save-dev`
+
+3.配置cypress启动项
+
+- 进入项目下的package.json文件，在script下面写入`"cypress": "cypress open"`配置启动项
+
+4.运行项目
+
+- 输入npm run cypress即可运行
+
+##### 3.2 测试用例
+
+测试集(套)
+
+​	测试用例1：
+
+​	测试用例2：
+
+​	测试用例3：
+
+```
+模板：
+/**
+* title：测试集名称
+* fn：测试集回调
+* context 或者 describe 都可
+*/
+context(title:'登录测试',fn: ()=>{
+	// 测试用例
+	it(title: '输入正确的用户名和密码，可以登录成功', fn: ()=>{
+	})
+})
+
+context
+describe
+it
+before
+beforeEach
+after
+afterEach
+.only
+.skip
+```
+
+参考cypress-pro\cypress\integration\3-test-examples\test_login.spec.js
+
+##### 3.3 前端测试
+
+**PO设计模式**：项目分级(封装页面对象，封装页面常见业务流)
+
+page	LoginPage.js // 获取当前页面cypress可识别对象
+
+​			......
+
+​			locator.json // 对象识别属性
+
+
+
+
 
 
 
