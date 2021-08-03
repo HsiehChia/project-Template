@@ -1,4 +1,4 @@
-import locator from './locator.json'
+import locator from './locate'
 
 export default class LoginPage {
   // 初始化地址
