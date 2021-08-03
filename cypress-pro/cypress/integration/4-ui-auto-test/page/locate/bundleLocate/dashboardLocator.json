@@ -1,0 +1,6 @@
+{
+  "bundleDashboard": {
+    "dashboardLogOut": "button[title=\"Log Out\"]",
+    "dashboardTitle": "nav>div:nth-child(1)"
+  }
+}
