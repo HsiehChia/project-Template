@@ -1,0 +1,10 @@
+{
+  "loginPage": {
+    "email": "[name=email]",
+    "password": "[name=password]",
+    "loginBtn": ".MuiButton-containedPrimary"
+  },
+  "myAppPage": {
+    "start": ".MuiButton-containedPrimary"
+  }
+}
