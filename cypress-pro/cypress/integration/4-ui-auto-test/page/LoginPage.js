@@ -17,6 +17,14 @@ export default class LoginPage {
   get loginBtn() {
     return cy.get(locator.loginPage.loginBtn)
   }
+
+  get invoicePortalStart() {
+    return cy.get(locator.myAppPage.start).first()
+  }
+
+  get bundleb2bStart() {
+    return cy.get(locator.myAppPage.start).last()
+  }
   // 访问地址
   openUrl(){
     cy.visit(this.url)
@@ -31,5 +39,9 @@ export default class LoginPage {
     this.password.type(password)
     }
     this.loginBtn.click()
+  }
+
+  chooseApp(startBtn) {
+    startBtn.click()
   }
 }
