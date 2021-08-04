@@ -5,7 +5,7 @@ export default {
   },
   "superAdmin": { 
     "email": "",
-  "password": "",
+    "password": "",
   },
   "seniorBuyer": {
     "email": "",
