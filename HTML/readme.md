@@ -70,19 +70,115 @@
 
 #### 简学前端：HTML篇（二）
 
-##### 1.HTML语法
-
-##### 2.HTML元素
-
-##### 3.HTML属性
 
 
 
+上篇文章讲解了入门必读后，文中提到的vscode的安装使用教程在本推文的副文章中，本篇推文就讲一讲HTML的简单含义和使用方法
+
+上一篇：**HTML入门必读**
+副文章：VSCode下载安装使用教程
+
+我们文章中指出的HTML均指的是HTML5，跟原先的HTML相比，声明更简便，更**语义化**（就是通过名字就能看出他的功能），功能和开发更加完整方便。
+
+首先，我们需要看懂上一篇文章中最后写出的HTML小实例框架的代表的意义，才能仿照这个做出其他更好的HTML网页，先附上实例的源码：
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first html page</title>
+</head>
+
+<body>
+  hello world!
+</body>
+
+</html>
+```
+看代码之前，需要了解几个定义：HTML元素语法，HTML元素，HTML标签，HTML元素属性，
+
+大概构成是这样的：
+
+![2-1](img\2-1.png)
+
+通过规范的HTML元素语法，写出HTML元素，HTML元素由标签和属性构成，其中标签相当于房子的框架，属性相当于房子框架的特点。更具体点就是你的房子有多少根房梁和多少面墙等等由标签决定，房梁承重多少，墙宽高和位置多少等等由属性决定。
+
+现在我们再来细说这段代码的意义：
+
+`<!DOCTYPE html>`：对文件格式的声明，告诉编译器，这个是一个HTML5的文档
+
+`<html>`：HTML页面的根元素，所有的HTML元素都要写在这个元素里面
+
+`<head>`：HTML头部元素，包含文档的元数据，就是对整个HTML文件的定义数据都在这里面
+
+`<meta>`：在<head>元素里面，定义整个文档性质的元素，如编码格式为utf-8(<meta charset="UTF-8">)
+
+`<body>`：HTML页面元素，也叫体元素，所有页面可视化内容都在这个元素里面
 
 
 
+值得一提的是，所有的HTML元素都是用标签写的，标签元素分为双标签（<div></div>）和单标签（<hr/>），特别注意单标签是自闭合标签，就是必须加一个 '/' ：<xxx/>这样的写法。早期的单标签没有自闭合，在开发过程中就发现HTML规范不够严谨，现在的HTML5都是用自闭合标签表示单标签，它的含义是<xxx/> === <xxx></xxx>，用来简化双标签的定义，注意没有</xxx>这种写法，'/'要写在标签名的后面。
 
 
 
+好了，看到这里你有没有稍微摸到HTML的门道了呢？
 
+
+
+关注我，我们一起Jane学前端。下一篇开始介绍各种元素的用法和意义，想要自己独立写一个的网站的，可不能错过哦！
+
+
+
+VSCode下载安装使用教程
+
+首先电脑进入VSCode官网：[https://code.visualstudio.com/Download（点击此链接安装）](https://code.visualstudio.com/Download)，进入首页：
+
+![image-20210915101725593](img\2-2.png)
+
+
+
+User Installer：表示 vscode安装到计算机当前账户中，就是除了你这个当前账号，其他账号登录将没有vscode这个软件（一般不推荐）
+
+System Installer：表示vscode安装在系统目录下，所有账户都可以使用（推荐）。
+
+.zip：这是一个 VS Code 的压缩包，下载后只需解压，不需要安装。也就是说，解压此压缩包之后，直接双击包含的 "code.exe" 文件，即可运行 VS Code（推荐）。
+
+我的是windows64位，根据自己的电脑下载相应的版本，可以下载zip压缩包，也可以下载安装文件（本篇讲解两种下载方式的安装使用）
+
+方式一：下载zip压缩包
+
+我的是64位，就点击Windows的64位下载
+
+![image-20210915102441367](img\2-3.png)
+
+下载保存在自己的电脑想安装的磁盘里面：
+
+![image-20210915102608890](img\2-4.png)
+
+文件解压后，找到Code.exe文件双击就可以打开vscode
+
+![image-20210915102722075](img\2-5.png)
+
+不想每次都从这里打开，可以选中code.exe，右键，选中发送到->桌面，添加快捷方式
+
+![image-20210915103636156](img\2-6.png)
+
+方式二：下载exe安装包
+
+同样，我选择Windows的64位安装包
+
+![image-20210915105848183](C:\Users\jane\AppData\Roaming\Typora\typora-user-images\image-20210915105848183.png)
+
+点击下载后，同样，保存在自己想要安装的位置中
+
+![image-20210915111247121](C:\Users\jane\AppData\Roaming\Typora\typora-user-images\image-20210915111247121.png)
+
+双击文件，开始安装
+
+![image-20210915111337428](C:\Users\jane\AppData\Roaming\Typora\typora-user-images\image-20210915111337428.png)
+
+点击接受协议后，点击下一步，点击浏览选择自己想要安装的位置，一直下一步直到
 
