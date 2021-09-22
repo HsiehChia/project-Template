@@ -2,6 +2,9 @@ import Base from './Base'
 
 export default class User extends Base {
   login() {
-    console.log('login')
+    return {
+      username: 'jane',
+      password: '123456',
+    }
   }
 }
