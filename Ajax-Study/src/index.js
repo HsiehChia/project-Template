@@ -8,8 +8,11 @@ window.b3utils = b3utils
 
 export default b3utils
 
-function JsonData() {
-  console.log(b3utils.api.user.login())
+const baseUrl = 'http://localhost:8000'
+
+function TestData() {
+  b3utils.api.user.getUserApi(baseUrl)
+  b3utils.api.user.fetchUserApi(baseUrl)
 }
 
-JsonData()
+TestData()
