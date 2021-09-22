@@ -7,3 +7,9 @@ const b3utils = {
 window.b3utils = b3utils
 
 export default b3utils
+
+function JsonData() {
+  console.log(b3utils.api.user.login())
+}
+
+JsonData()
