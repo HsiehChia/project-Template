@@ -252,6 +252,202 @@ System Installer：表示vscode安装在系统目录下，所有账户都可以�
 
 好了，今天的介绍就到这里吧，其实还有很多有趣的编程学习网站，比如stackoverflow等等，但是在这里就介绍这7中实用性相对更强的网站吧，有其他问题和想法的都可以通过公众号留言哦！
 
+#### **HTML邮件模板
+
+##### template
+
+一般的邮件格式就是文字+图片+资源链接这种常见的格式，带背景图和样式的邮件其实是一个网页，正式名称叫做HMTL Email。但是在收到邮件的时候是否能够正常显示，取决于邮件客户端，很多客户端（比如Outlook和Gmail），会过滤一些HTML和CSS，让邮件的格式四分五裂，像是乱码，但是合理利用布局，也可以写出很好看的邮件模板。
+
+##### 1.注意事项
+
+（1）使用兼容性最高的页头和页尾XHTML 1.0 Strict，编码格式用utf-8(gb2312)，Doctype不是必须的，因为邮件客户端会自动把文件类型替换成这个Doctype（Doctype详解：https://www.cnblogs.com/coldfishdt/p/6533120.html）
+
+（2）页面宽度400px-800px，现使用600px
+
+（3）页面想要出现动态变化，不能使用js代码和flash动画，因为会被过滤，可以录制成gif显示
+
+（4）页面所有图片必须使用绝对地址
+
+（5）使用table布局制作页面，必须设置宽度，div的部分属性不被客户端完全支持，避免使用
+
+（6）禁止使用外联样式<link rel="stylesheet" href="style.css">，不能写到<head></head>里面?(**本人测试类的定义是可以的**)，只能写到标签里面的style属性里面
+
+（7）图片必须设置width和height（**只设置width？**），增加alt属性（alt内容不能过多或出现特殊字符），**不能使用.png格式图片，而是使用gif和jpg格式图片？**
+
+（8）不要使用postion定位和浮动定位，不能使用负边距，如：margin-left: -20px
+
+（9）总代码量<50k，否则容易自动过滤到垃圾箱，如QQ邮箱（13年的时候是15k，相比起来已经大很多了）
+
+（10）所有的链接使用target="_blank"
+
+（11）HTML电子邮件既不支持`colspan`和`rowspan`属性
+
+（12）h标签和p标签都不完全适用，这些渲染在电子邮件客户端存在相当大的麻烦
+
+（13）图片命名最好简短且有意义，因为这将影响邮件是否被定义为垃圾邮件。图片的大小不低于250k，但是也不能太大，尤其是在移动端，会影响邮件加载能否成功。
+
+##### 2.table布局
+
+使用最低版本的Doctype意味着不可以使用HTML5，所有的标签只能使用旧版本的HTML，由于div部分属性不兼容，所以使用table布局。table表示一个表格，tr表示一行，td表示一列。因为HTML的table元素没有HTML5的table多样化和语义化，只能使用这三个进行布局，代码会显得比较凌乱，最好写好注释，便于修改。
+
+```html
+<table>
+    <tr>
+        <td>123</td>
+    </tr>
+</table>
+```
+
+###### a.布局一：左右
+
+```html
+<table>
+    <tr>
+        <td>left</td>
+        <td>right</td>
+    </tr>
+</table>
+```
+
+###### b.布局二：上下
+
+```html
+<table>
+    <tr>
+        <td>top</td>
+    </tr>
+    <tr>
+        <td>bottom</td>
+    </tr>
+</table>
+```
+
+###### c.布局三：上1下n / 上n下1
+
+```html
+<table>
+    <tr>
+        <td>top</td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                .....
+            </table>
+        </td>
+    </tr>
+</table>
+```
+
+###### d.布局四：左1右n  / 左n右1
+
+```html
+<table>
+    <tr>
+        <td>left</td>
+        <td>
+            <table>
+                .....
+            </table>
+        </td>
+    </tr>
+</table>
+```
+
+**肯定有疑问为什么不使用rowspan和colspan属性，因为并不是所有邮箱都支持，所以所有布局都需要使用table嵌套解决**
+
+##### 3.样式
+
+对CSS支持的匮乏，不支持外部的style文件，Gmail邮箱也会清除所有的内部style标签，这就意味着只有内联的css是唯一可靠的样式信息。但是也不是使用style属性就万事大吉了，因为很多邮箱会对特定标签的属性强行修改，所以能直接用属性的就不用样式
+
+比如在outlook中不可以用style的属性来设置图片的宽高：`<img style="width:10px; height:10px;" src="test.jpg">`
+
+正确的设置方法，需要直接设置宽高属性：`<img width="10px" height="10px" src="test.jpg">`
+
+###### a.**标签常用属性：**
+
+table:width,backgroundcolor,align
+
+tr:此标签不能写样式
+
+td:align,valign,backgroundcolor,height,width
+
+img:width,height,alt
+
+###### b.**样式需要单独指定**
+
+写页面的时候HTML的CSS继承很方便，但是这个邮件页面，大部分邮件都无法完整继承样式，并且邮箱的默认样式也会对邮件产生一些头疼的干扰。比如 `font-family`，OutLook 中若想改变字体，至少每个 `table` 中都要指定 `font-family`，而在 QQ 邮箱甚至必须每个 `td` 都设置 `font-family` 才能全部生效。
+
+```html
+<td style="font: bold 12px Arial;"></td>
+// 需要修改成
+<td style="font-weight: bold; font-size: 12px; font-family: Arial;"></td>
+```
+
+###### c.**图片**
+
+**一般图片**：<img />
+
+（1）所有图片要设置border=0
+
+（2）Foxmail不支持https的图片路径，系统往往会默认不载入陌生来信的图片。
+
+（3）所有图片必须存在宽高和alt标签，且alt内容不宜过多不能出现特殊字符；重要内容尽量避免使用图片，比如标题、链接等。
+
+**背景图片**：style="background："
+
+设置 color，但是 image 会被过滤，不能通过 CSS 来设置背景图片，但是background，里面可以定义一个图片路径，但是功能有限，比如无法定位背景图片等。(**实操foxmail可以实现定位**)
+
+
+
+###### d.**定位**
+
+dom的位置用align / valign
+
+align 表示水平方向上的显示，有left/right/center
+
+valign表示垂直上的显示，有middle/bottom/top
+
+**邮件里文字的居中就用text-align，dom的居中就用align=center**
+
+有padding的地方要单独指定，不能写简称。
+
+
+
+##### 4.设计
+
+（1）有几种类型的字体
+
+（2）有几种颜色
+
+（3）分析布局：div ≈ table
+
+（4）**与浏览器距离**： 在body标签里居然还能用margin属性 按理说他是已经是根了 但还有这说属性说明他并不是我们认为的根 而他上面还有 按上面的 leftmargin rightmargin 的定义来讲 那最终的根应该是浏览器。
+
+（5）***body{-webkit-text-size-adjust : none;}**设为 none 或者*100%关闭字体大小自动调整功能
+
+
+
+##### 5.foxmail测试
+
+（1）复制所有的代码
+
+（2）打开Foxmail，点击写邮件
+
+（3）选择HTML，替换粘贴
+
+![image-20210929172932103](C:\Users\jane\AppData\Roaming\Typora\typora-user-images\image-20210929172932103.png)
+
+（4）预览邮件
+
+![image-20210929173204240](C:\Users\jane\AppData\Roaming\Typora\typora-user-images\image-20210929173204240.png)
+
+（5）填写主题和收件人，点击发送，收到邮件
+
+![image-20210929173240123](C:\Users\jane\AppData\Roaming\Typora\typora-user-images\image-20210929173240123.png)
+
+
+
 
 
 #### 自学前端好找工作吗
