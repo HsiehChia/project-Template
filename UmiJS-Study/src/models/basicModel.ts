@@ -1,9 +1,47 @@
+import { Effect, Reducer } from 'umi';
 import { getBasicData } from '@/services';
 
-export default {
+export interface BasicModelState {
+  Title: '',
+  BeiAn: '',
+  QRCode: '',
+  Phone: [],
+  Email: '',
+  Address: [],
+  ProductMore: "",
+  PositionMore: '',
+  FaceBook: '',
+  Twitter: '',
+  YouTube: '',
+  LinkedIn: ''
+}
+
+export interface BasicModelType {
+  name: 'basicModel';
+  state: BasicModelState;
+  effects: {
+    getBasicData: Effect;
+  };
+  reducers: {
+    setBasicData: Reducer<BasicModelState>;
+  }
+}
+
+const BasicModel = {
   namespace: 'basicModel',
   state: {
-    basicData: {},
+    Title: '',
+    BeiAn: '',
+    QRCode: '',
+    Phone: [],
+    Email: '',
+    Address: [],
+    ProductMore: "",
+    PositionMore: '',
+    FaceBook: '',
+    Twitter: '',
+    YouTube: '',
+    LinkedIn: ''
   },
   effects: {
     *getBasicData(
@@ -12,18 +50,28 @@ export default {
     ): any {
       const response: any = yield call(getBasicData, payload);
       if (callback) callback(response);
-      yield put({
-        type: 'basicData',
-        payload: response.basicData,
-      });
+      if(response.code !== 1) {
+        // 有错误
+        console.error(response.msg)
+      } else {
+        yield put({
+          type: 'setBasicData',
+          payload: response.data,
+        });
+      }
     },
   },
   reducers: {
-    basicData(state: any, action: any) {
+    setBasicData(state: any, action: any) {
       return {
         ...state,
-        basicData: action.payload,
+        ...action.payload,
       };
     },
   },
+  subscriptions: {
+
+  }
 };
+
+export default BasicModel;
