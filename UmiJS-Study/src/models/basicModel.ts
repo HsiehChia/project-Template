@@ -70,7 +70,12 @@ const BasicModel = {
     },
   },
   subscriptions: {
-
+    setUp({dispatch, history}) {
+      history.listen(({pathname}) => {
+        console.log( pathname );
+        // dispatch({ type: 'basicModel/getBasicData'})
+      })
+    }
   }
 };
 
