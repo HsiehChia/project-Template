@@ -1,5 +1,8 @@
 import styles from './index.less';
 
+// import { Provider } from 'react-redux'
+// import store from '@/utils/store'
+
 import { IntlProvider } from '@/utils/Provider'
 // import { Provider } from 'react-redux'
 // import store from '@/utils/store'
@@ -20,11 +23,13 @@ import { IntlProvider } from '@/utils/Provider'
 
 export default function LayOut(props: any) {
   return (
+    // <Provider store={store}>
     <IntlProvider>
       <div>
         <div className={styles.layoutWrapper}>layout</div>
         {props.children}
       </div>
     </IntlProvider>
+    // </Provider>
   )
 }
