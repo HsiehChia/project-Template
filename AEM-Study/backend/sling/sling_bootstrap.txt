@@ -1,0 +1,226 @@
+uninstall com.google.guava 15.0.0
+uninstall com.adobe.ep.granite.com.adobe.granite.fragment.xml
+uninstall com.adobe.aes.aesop.com.adobe.aes.aesop.j2ee
+uninstall com.day.crx.sling.api.fragment
+uninstall com.day.crx.sling.com.day.crx.sling.base
+uninstall com.day.crx.sling.com.day.crx.sling.client
+uninstall com.adobe.granite.extensions.webconsolebranding
+uninstall javax.jcr
+uninstall com.adobe.granite.fragment.xml
+uninstall com.day.commons.osgi.wrapper.mail
+uninstall org.apache.sling.fragment.activation
+uninstall org.apache.sling.installer.api
+uninstall org.apache.sling.hc.jmx
+uninstall io.sightly.js.bundle
+uninstall io.sightly.bundle
+uninstall com.day.commons.osgi.wrapper.commons-email
+# see GRANITE-5301
+uninstall org.apache.sling.extensions.threaddump
+# CQ-70541 - Remove obsolete CRXDE support bundle on upgrade
+uninstall com.adobe.granite.crxde-support
+uninstall com.day.crx.crxde-support
+#CQ-70517 Remove obsolete subsystem bundles on upgrade
+uninstall org.apache.aries.subsystem.api
+uninstall org.apache.aries.subsystem.core
+uninstall org.eclipse.equinox.region
+uninstall org.osgi.service.subsystem.region.context.0
+uninstall org.apache.sling.installer.factory.subsystems
+uninstall org.apache.felix.resolver
+# Remove obsolete bundles
+uninstall org.apache.sling.jcr.compiler
+uninstall org.apache.felix.prefs
+# see GRANITE-14446
+uninstall org.apache.jackrabbit.oak-segment
+uninstall org.apache.jackrabbit.oak-tarmk-standby
+# see GRANITE-15970
+uninstall com.adobe.granite.ocs.api
+uninstall com.adobe.granite.ocs.core
+uninstall com.adobe.granite.ocs.provider.aws
+uninstall org.apache.felix.http.brdige
+# Upgrade from CQ 5.4 -> CQ 5.5
+uninstall com.day.cq.cq-shindig
+uninstall org.apache.sling.runmode
+# Upgrade from CQ 5.3 -> CQ 5.4 and later
+uninstall org.apache.sling.osgi.installer [0,4]
+uninstall org.apache.sling.jcr.jcrinstall [0,4]
+uninstall org.apache.sling.commons.auth
+# Upgrade from CQ 5.2.1 -> CQ 5.3
+uninstall org.apache.felix.dependencymanager [0,1.2]
+uninstall org.apache.felix.deploymentadmin [0,1]
+uninstall org.apache.sling.jcr.jackrabbit.api [0,2.1]
+uninstall org.apache.jackrabbit.jackrabbit-jcr-commons [0,2)
+uninstall org.apache.sling.scripting.java [2.0.0,2.0.1)
+uninstall com.day.crx.sling.com.day.crx.sling.api [0,2)
+uninstall org.apache.sling.osgi.startlevelmanager [0,0.2)
+uninstall com.day.commons.osgi.wrapper.commons-codec [0,2.0)
+uninstall com.day.commons.day.commons.datasource.poolservice 1.0.0
+uninstall com.day.commons.day.commons.datasource.jdbcpool 1.0.2
+uninstall com.day.commons.day-commons-jstl 1.1.2
+uninstall com.day.cq.cq-cqde 5.2.4
+# com.day.cq.cq-packaging is gone since 5.5
+uninstall com.day.cq.cq-packaging
+# CQ5-32275 - let the installer reinstall this bundle
+uninstall org.apache.felix.webconsole.plugins.event [0,1.0.2]
+uninstall org.apache.sling.jcr.classloader
+uninstall com.day.jcr.vault
+# CRX2 fragments need to be uninstalled for stable instance after inplace upgrade to CRX3
+uninstall com.day.crx.sling.server
+uninstall org.apache.felix.org.apache.felix.http.sslfilter
+# CQ-41071 - Remove obsolete SoCo bundles from CQ quickstart
+uninstall com.adobe.cq.social.cq-social-storage
+uninstall com.day.cq.collab.cq-collab-blog
+uninstall com.day.cq.collab.cq-collab-calendar
+uninstall com.day.cq.collab.cq-collab-commons
+uninstall com.day.cq.collab.cq-collab-core
+uninstall com.day.cq.collab.cq-collab-forum
+uninstall com.day.cq.collab.cq-collab-wiki
+uninstall com.day.cq.collab.cq-collab-wiki-api
+# CQ-70537 Remove obsolete CQ Social bundles on upgrade
+uninstall com.adobe.cq.social.cq-social-blog
+uninstall com.day.cq.cq-opensocial
+# CQ-41072 - Remove obsolete MAC bundles from CQ quickstart
+uninstall com.adobe.mac.core
+uninstall com.adobe.mac.core.api
+uninstall com.adobe.mac.core.api.accountsupport
+uninstall com.adobe.mac.core.api.notificationsupport
+uninstall com.adobe.mac.core.notificationsupport
+uninstall mac-core
+# CQ-41073 - Remove obsolete Shared Cloud bundles from CQ quickstart
+uninstall com.adobe.sharedcloud.worker.XMPFilesProcessor
+uninstall com.adobe.sharedcloud.worker.XMPFilesProcessor.native.fragment.linux
+uninstall com.adobe.sharedcloud.worker.XMPFilesProcessor.native.fragment.macosx
+uninstall com.adobe.sharedcloud.worker.XMPFilesProcessor.native.fragment.win
+# CQ-41074 - Remove obsolete APNS bundles from CQ quickstart
+uninstall com.day.cq.cq-apns-client
+uninstall com.day.cq.cq-apns-core
+# CQ-41075 - Remove obsolete miscellaneous bundles from CQ quickstart
+uninstall com.day.commons.osgi.wrapper.svnkit
+uninstall com.day.crx.crx-scm-integration
+uninstall com.day.cq.dam.cq-dam-creativecloud
+uninstall com.day.cq.wcm.cq-wcm-newsletter
+uninstall org.apache.commons.lang
+uninstall org.apache.felix.bundlerepository
+uninstall scc-core
+#CQ-43060 - remove legacy tag manager integration bundles and components
+uninstall com.adobe.cq.cq-dms-tagmanager
+#CQ-61296 - Remove legacy Search&Promote Geometrixx bundles
+uninstall com.day.cq.cq-searchpromote-geometrixx
+uninstall com.day.cq.cq-searchpromote
+#CQ-61485 - Two analytics bundles export the same packages on an upgraded instance
+uninstall com.day.cq.cq-analytics
+#CQ-70432 - Remove com.adobe.cq.mobile.cq-mobile-phonegap-wcm-core when upgrading to AEM 6.2
+uninstall com.adobe.cq.mobile.cq-mobile-phonegap-wcm-core
+# CQ-70522 - Remove obsolete Silverpop bundles on upgrade (6.2)
+uninstall com.day.cq.mcm.cq-mcm-silverpop-integration
+# CQ-70524 - Remove discovery.impl upon upgrade to AEM 6.2 (since that was replaced with discovery.oak)
+uninstall org.apache.sling.discovery.impl
+#see CQ-70521 - remove nekohtml this is not needed anymore
+uninstall com.day.cq.dam.commons.nekohtml
+# CQ-70538 - Remove obsolete cq-pinauthhandler bundle on upgrade
+uninstall com.day.cq.cq-pinauthhandler
+# CQ-70540 - Remove obsolete PhoneGap Build Integration bundle on upgrade
+uninstall com.day.cq.wcm.cq-wcm-mobile-phonegap-build-integration
+# CQ-70525 - Remove obsolete Granite Patch Installer bundle on upgrade
+uninstall com.adobe.granite.installer.patch
+# CQ-70536 - Remove obsolete CQ Jobs bundle on upgrade
+uninstall com.day.cq.cq-jobs-core
+# CQ-70516 - Remove obsolete Creative Cloud Bundles on upgrade
+uninstall com.adobe.cq.cq-creativecloud-cloudims
+uninstall com.adobe.cq.cq-creativecloud-commons
+uninstall com.adobe.cq.cq-creativecloud-filesync
+uninstall com.adobe.cq.cq-creativecloud-storage
+# CQ-70511 - CQ quickstart should uninstall obsolete bundles during upgrade
+uninstall biz.aQute.bndlib
+uninstall com.day.crx.crx-auth-ldap
+# CQ-55409 - Duplicate joda time bundles in cq-commons
+uninstall com.day.commons.osgi.wrapper.joda-time
+# CQ-73191 - Remove pre-BSN-rename bundles that might be left after upgrade
+uninstall rngom
+uninstall joda-time
+uninstall com.google.gson
+# CQ-37408 - Remove deprecated "activitiystreams" modules
+uninstall com.day.cq.cq-activitystreams-api
+uninstall com.day.cq.cq-activitystreams-core
+# CQ-81751 - Remove obsolete org.apache.jackrabbit.oak-mk-api bundle on upgrade
+uninstall org.apache.jackrabbit.oak-mk-api
+# CQ-83482 - Remove obsolete bundles originating from soco hotfixes not starting after upgrade
+uninstall com.adobe.cq.social.cq-social-scoring
+uninstall com.adobe.cq.social.cq-social-ugcbase
+# CQ-86239 - [upgrade] com.adobe.cq.aam.cq-audiencemanager-1.2.20 not removed on upgrade
+uninstall com.adobe.cq.aam.cq-audiencemanager
+# CQ-86242 - [upgrade] org.apache.felix.scr.compat-1.0.0 not removed on upgrade
+uninstall org.apache.felix.scr.compat [0,1.0.0]
+# CQ-86240 - [upgrade] com.adobe.cq.cq-serialization-tester-1.0.10 not removed on upgrade
+uninstall com.adobe.cq.cq-serialization-tester [0,1.0.10]
+# CQ-98292 - [upgrade] Two orphan bundles after upgrade
+uninstall com.adobe.cq.social.cq-social-console-dns-api
+uninstall com.adobe.cq.social.cq-social-console-dns-impl
+# CQ-99260 - [upgrade] Orphan geometrixx bundles
+uninstall com.adobe.cq.wcm.cq-geometrixx-commons-core [0,1.4.8]
+uninstall com.day.cq.wcm.cq-wcm-geometrixx [0,5.8.2]
+# CQ-101284 - [upgrade] com.day.cq.dam.cq-dam-drive-handlers not uninstalled
+uninstall com.day.cq.dam.cq-dam-drive-handlers
+#CQ-59758 RTC: remove com.day.cq.theme bundle from quickstart
+uninstall com.day.cq/com.day.cq.theme
+# CQ-111338 - [upgrade] Source-only bundle: org.apache.sling.bgservlets
+uninstall org.apache.sling.bgservlets
+# CQ-4196189
+uninstall com.adobe.cq.social.cq-social-calendar
+uninstall com.adobe.cq.social.cq-social-messaging
+# CQ-4197746 remove site importer with 6.3
+uninstall com.day.cq.wcm.cq-wcm-siteimporter [0,5.10.4]
+# GRANITE-16640 - Handle .class files compiled with older version on Upgrade
+uninstall org.apache.sling.commons.fsclassloader [0.0.0,1.0.4)
+# CQ-4201384 - [upgrade] com.day.jcr.vault.com.day.jcr.vault-2.5.12 not uninstalled
+uninstall com.day.jcr.vault.com.day.jcr.vault
+# NPR-15240 upgrade to 6.3 -> remove bundles from dam 6.1 FP NPR-13043
+uninstall com.day.cq.dam.cq-dam-fp-bulkmetadata
+uninstall com.day.cq.dam.cq-dam-fp-iptcpanels
+uninstall com.day.cq.dam.cq-dam-fp-linkshare
+# CQ-4201380 [upgrade] com.adobe.cq.search-collections not uninstalled (removed via CQ-102838)
+uninstall com.adobe.cq.search-collections
+# CQ-4201391 [upgrade][s3] crx-ext-s3-1.0.50 and com.fasterxml.jackson.dataformat.jackson-dataformat-cbor-2.6.1 not uninstalled
+# CQ-4226798
+uninstall crx-ext-s3
+# CQ-4201388, [upgrade] com.adobe.aemfd.expeditor.aemfd-expeditor-wsdl-bundle-1.0.20 not uninstalled
+uninstall com.adobe.aemfd.expeditor.aemfd-expeditor-wsdl-bundle [0.0.0,3.1.0)
+# CQ-4229324, upgrade to 6.4 -> remove bundles specific to batch
+uninstall com.adobe.aemds.guide.aemds-guide-batch-api [0.0.0,5.1.0)
+uninstall com.adobe.aemds.guide.aemds-guide-batch-impl [0.0.0,5.1.0)
+# CQ-4219102, upgrade to 6.4 -> remove bundles specific to old adaptive document
+uninstall com.adobe.aemds.ad.aemds-adaptivedocument-addon [0.0.0,5.0.0)
+# CQ-4226554, upgrade to 6.4 -> remove bundles specific to asset composer building
+uninstall com.adobe.livecycle.acm [0.0.0,9.0.0)
+# GRANITE-17026 - Oak MicroKernel Bundle installed state after upgrade (still)
+uninstall org.apache.jackrabbit.oak-mk
+# CQ-4207213 Remove Sling Servlets Get Compat bundle with JsonQueryServlet
+uninstall org.apache.sling.servlets.compat
+# see CQ-102838
+uninstall org.apache.sanselan.sanselan
+# see CQ-4217269 - remove mobile bundles as part of 6.4
+uninstall com.adobe.cq.mobile.cq-mobile-core [0,6.3.110]
+uninstall com.adobe.cq.mobile.cq-mobile-phonegap-build [0,5.10.4]
+uninstall com.adobe.cq.mobile.cq-mobile-ui [0,6.2.4]
+uninstall com.adobe.cq.mobile.cq-mobile-index-builder [0,1.0.4]
+uninstall com.adobe.cq.mobile.cq-mobile-dps [0,1.1.62]
+uninstall com.adobe.cq.mobile.cq-mobile-caas [0,1.0.44]
+# CQ-4217368 - remove Publications
+uninstall com.adobe.cq.media.cq-media-publishing-dps-fp-api [0,5.11.2]
+uninstall com.adobe.cq.media.cq-media-publishing-dps-fp-core [0,5.10.6]
+uninstall com.adobe.cq.media.cq-media-publishing-dps-integration [0,5.11.2]
+# CQ-4205211, [upgrade] remove forms integration for mobile as part of 6.4
+uninstall com.adobe.aem.forms.aem-apps-forms-addon-bundle [0,4.0.0]
+# CQ-4232362 - [upgrade] Source-only bundle: org.apache.jackrabbit.jackrabbit-jcr-rmi', version='2.14.1'
+uninstall org.apache.jackrabbit.jackrabbit-jcr-rmi [0,2.16.0)
+# CQ-4241828 - [upgrade] Unstable AEM 6.5 upgrade after cq-dam-scene7 is replaced by cq-scene7-core and cq-scene7-api
+uninstall com.day.cq.dam.cq-dam-scene7
+uninstall com.day.cq.dam.cq-dam-s7dam
+uninstall com.day.cq.wfchangeinstallhook-bundle
+# GRANITE-22952 - Provide a common system package profile for all java versions
+uninstall org.apache.sling.fragment.ws
+uninstall org.apache.sling.fragment.xml
+
+uninstall org.apache.felix.http.bridge
+uninstall org.apache.felix.http.api
+uninstall cqse-httpservice
+
