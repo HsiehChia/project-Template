@@ -11,9 +11,7 @@
 quickstart.jar
 license.properties
 */crx-quickstart
-*/sling/repository
-*/sling/logs
-*/sling/felix
+*/sling/*
 
 # build
 /dist

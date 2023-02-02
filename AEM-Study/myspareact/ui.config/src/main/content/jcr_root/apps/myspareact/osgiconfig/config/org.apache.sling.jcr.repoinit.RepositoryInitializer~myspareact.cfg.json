@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/myspareact",
+        "create path (nt:unstructured) /content/dam/myspareact/jcr:content",
+        "set properties on /content/dam/myspareact/jcr:content\n  set cq:conf{String} to /conf/myspareact\n  set jcr:title{String} to \"My SPA React\"\nend"
+    ]
+}

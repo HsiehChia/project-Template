@@ -7,51 +7,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="bundle466" level="project" />
-    <orderEntry type="library" name="bundle145" level="project" />
-    <orderEntry type="library" name="bundle250" level="project" />
-    <orderEntry type="library" name="bundle179" level="project" />
-    <orderEntry type="library" name="bundle434" level="project" />
-    <orderEntry type="library" name="bundle.jar-embedded16" level="project" />
-    <orderEntry type="library" name="bundle233" level="project" />
-    <orderEntry type="library" name="bundle472" level="project" />
-    <orderEntry type="library" name="1" level="project" />
-    <orderEntry type="library" name="bundle297" level="project" />
-    <orderEntry type="library" name="bundle33" level="project" />
-    <orderEntry type="library" name="bundle574" level="project" />
-    <orderEntry type="library" name="bundle302" level="project" />
-    <orderEntry type="library" name="bundle556" level="project" />
-    <orderEntry type="library" name="bundle" level="project" />
-    <orderEntry type="library" name="bundle265" level="project" />
-    <orderEntry type="library" name="bundle503" level="project" />
-    <orderEntry type="library" name="bundle94" level="project" />
-    <orderEntry type="library" name="bundle210" level="project" />
-    <orderEntry type="library" name="bundle415" level="project" />
-    <orderEntry type="library" name="bundle139" level="project" />
-    <orderEntry type="library" name="bundle110" level="project" />
-    <orderEntry type="library" name="bundle432" level="project" />
-    <orderEntry type="library" name="bundle.jar-embedded3" level="project" />
-    <orderEntry type="library" name="bundle322" level="project" />
-    <orderEntry type="library" name="bundle366" level="project" />
-    <orderEntry type="library" name="commons-lang3-3.3.2" level="project" />
-    <orderEntry type="library" name="bundle76" level="project" />
-    <orderEntry type="library" name="bundle266" level="project" />
-    <orderEntry type="library" name="bundle284" level="project" />
-    <orderEntry type="library" name="bundle225" level="project" />
-    <orderEntry type="library" name="bundle270" level="project" />
-    <orderEntry type="library" name="bundle428" level="project" />
-    <orderEntry type="library" name="bundle.jar-embedded14" level="project" />
-    <orderEntry type="library" name="bundle77" level="project" />
-    <orderEntry type="library" name="bundle470" level="project" />
-    <orderEntry type="library" name="bundle66" level="project" />
-    <orderEntry type="library" name="bundle65" level="project" />
-    <orderEntry type="library" name="bundle337" level="project" />
-    <orderEntry type="library" name="bundle95" level="project" />
-    <orderEntry type="library" name="bundle263" level="project" />
-    <orderEntry type="library" name="jsp-api-6.0.14" level="project" />
-    <orderEntry type="library" name="bundle530" level="project" />
-    <orderEntry type="library" name="bundle535" level="project" />
-    <orderEntry type="library" name="bundle213" level="project" />
-    <orderEntry type="library" name="bundle376" level="project" />
   </component>
 </module>
