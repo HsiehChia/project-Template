@@ -50,7 +50,6 @@ const BasicModel = {
     ): any {
       const response: any = yield call(getBasicData, payload);
       if (callback) callback(response);
-<<<<<<< HEAD
       if(response.code !== 1) {
         // 有错误
         console.error(response.msg)
@@ -81,20 +80,3 @@ const BasicModel = {
 };
 
 export default BasicModel;
-=======
-      yield put({
-        type: 'basicData',
-        payload: response.basicData,
-      });
-    },
-  },
-  reducers: {
-    basicData(state: any, action: any) {
-      return {
-        ...state,
-        basicData: action.payload,
-      };
-    },
-  },
-};
->>>>>>> 184606a (feat: dva model)
