@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!--
+请补全JavaScript代码，要求以数组的形式返回字符串参数的所有排列组合。
+注意：
+1. 字符串参数中的字符无重复且仅包含小写字母
+2. 返回的排列组合数组不区分顺序
+输入：_permute('abc')
+输出：['abc','acb','bac','bca','cab','cba']
+-->
+<body>
+    <script type="text/javascript">
+      function backTrack(arr, length, res) {
+        // 结束条件
+        // 递归
+        for(let i = 0; i < res.length; i++) {
+
+        }
+      }
+        const _permute = string => {
+            // 补全代码
+            const arr = string.split('')
+            const res = []
+            // 回溯
+            backTrack(arr, arr.length, res)
+            return res
+        }
+
+        const res =_permute('abc')
+        console.log(res);
+    </script>
+</body>
+</html>

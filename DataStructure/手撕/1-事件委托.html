@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!--
+请补全JavaScript代码，要求如下：
+1. 给"ul"标签添加点击事件
+2. 当点击某"li"标签时，该标签内容拼接"."符号。如：某"li"标签被点击时，该标签内容为".."
+注意：
+1. 必须使用DOM0级标准事件（onclick）
+-->
+<body>
+  <ul>
+        <li>.</li>
+        <li>.</li>
+        <li>.</li>
+    </ul>
+
+    <script type="text/javascript">
+        // 补全代码
+        document.querySelector('ul').onclick = function(e) {
+          e.target.innerHTML += '.'
+        }
+    </script>
+</body>
+</html>
